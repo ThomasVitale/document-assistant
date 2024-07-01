@@ -11,5 +11,5 @@ spec:
     framework: spring-boot
     language: java
   serviceClaims:
-    - name: mistral-ai
+    - name: openai
     - name: postgresql
