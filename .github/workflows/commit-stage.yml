@@ -1,0 +1,26 @@
+name: Commit Stage
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Publish
+    permissions:
+      attestations: write
+      contents: read
+      id-token: write
+      packages: write
+    uses: ./.github/workflows/multi-arch-publish-native.yml
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [
+          {context: ., image: document-assistant}
+        ]
+    with:
+      context: ${{ matrix.project.context }}
+      image: ${{ matrix.project.image }}
+    secrets:
+      push-token: ${{ secrets.GITHUB_TOKEN }}

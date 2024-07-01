@@ -1,0 +1,15 @@
+---
+apiVersion: app.kadras.io/v1alpha1
+kind: Workload
+metadata:
+  name: document-assistant
+  labels:
+    app: document-assistant
+spec:
+  image: ghcr.io/thomasvitale/document-assistant
+  application:
+    framework: spring-boot
+    language: java
+  serviceClaims:
+    - name: mistral-ai
+    - name: postgresql
