@@ -1,0 +1,13 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: document-assistant
+  description: An AI assistant for querying documents
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: ThomasVitale/document-assistant
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/hephaestus-team
