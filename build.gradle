@@ -30,7 +30,7 @@ dependencies {
 
 	implementation 'org.springframework.ai:spring-ai-openai-spring-boot-starter'
 	implementation 'org.springframework.ai:spring-ai-pgvector-store-spring-boot-starter'
-	implementation "org.springframework.ai:spring-ai-spring-cloud-bindings:${springAiVersion}"
+	implementation "org.springframework.ai:spring-ai-spring-cloud-bindings:1.0.0-M1"
 
 	implementation 'io.micrometer:micrometer-tracing-bridge-otel'
 	implementation 'io.opentelemetry:opentelemetry-exporter-otlp'
